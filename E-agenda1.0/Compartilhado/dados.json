@@ -1,0 +1,125 @@
+{
+  "$id": "1",
+  "contatos": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "nome": "Charles",
+        "empresa": "213421",
+        "telefone": "12342134",
+        "email": "2134213",
+        "cargo": "4213421",
+        "id": 1
+      }
+    ]
+  },
+  "compromissos": {
+    "$id": "4",
+    "$values": [
+      {
+        "$id": "5",
+        "contato": {
+          "$ref": "3"
+        },
+        "assunto": "Reuni\u00E3o",
+        "data": "2023-06-02T16:06:21.3705128-03:00",
+        "horaInicio": "08:12:42.7359510",
+        "horaTermino": "08:12:42.7273569",
+        "localOnline": "",
+        "localPresencial": null,
+        "tipoLocal": 1,
+        "id": 1
+      }
+    ]
+  },
+  "tarefas": {
+    "$id": "6",
+    "$values": [
+      {
+        "$id": "7",
+        "prioridade": 0,
+        "titulo": "Arrumar a casa",
+        "dataInicial": "2023-06-02T16:09:27",
+        "dataFinal": "2023-06-02T16:09:27",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "8",
+          "$values": []
+        },
+        "id": 1
+      },
+      {
+        "$id": "9",
+        "prioridade": 1,
+        "titulo": "Limpar o quarto",
+        "dataInicial": "2023-06-02T16:56:09.4023383-03:00",
+        "dataFinal": "2023-06-02T16:56:09.3991629-03:00",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "10",
+          "$values": []
+        },
+        "id": 2
+      },
+      {
+        "$id": "11",
+        "prioridade": 2,
+        "titulo": "Organizar a Lou\u00E7a",
+        "dataInicial": "2023-06-02T16:56:18.4106552-03:00",
+        "dataFinal": "2023-06-02T16:56:18.4076494-03:00",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "12",
+          "$values": []
+        },
+        "id": 3
+      },
+      {
+        "$id": "13",
+        "prioridade": 0,
+        "titulo": "Deixar de ser imbecil",
+        "dataInicial": "2023-06-02T16:56:25.436494-03:00",
+        "dataFinal": "2023-06-02T16:56:25.4331334-03:00",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "14",
+          "$values": []
+        },
+        "id": 4
+      },
+      {
+        "$id": "15",
+        "prioridade": 1,
+        "titulo": "Fazer as provas",
+        "dataInicial": "2023-06-02T16:56:34.0976253-03:00",
+        "dataFinal": "2023-06-02T16:56:34.0945353-03:00",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "16",
+          "$values": []
+        },
+        "id": 5
+      },
+      {
+        "$id": "17",
+        "prioridade": 2,
+        "titulo": "Planejar as aulas",
+        "dataInicial": "2023-06-02T16:56:44.9909774-03:00",
+        "dataFinal": "2023-06-02T16:56:44.9878193-03:00",
+        "porcentagemConcluida": 0,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "18",
+          "$values": []
+        },
+        "id": 6
+      }
+    ]
+  }
+}
