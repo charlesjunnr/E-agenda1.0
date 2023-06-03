@@ -11,14 +11,23 @@
         "email": "2134213",
         "cargo": "4213421",
         "id": 1
+      },
+      {
+        "$id": "4",
+        "nome": "Gianloca",
+        "empresa": "NDD",
+        "telefone": "99999999",
+        "email": "gian@gmail.com",
+        "cargo": "Dev",
+        "id": 2
       }
     ]
   },
   "compromissos": {
-    "$id": "4",
+    "$id": "5",
     "$values": [
       {
-        "$id": "5",
+        "$id": "6",
         "contato": {
           "$ref": "3"
         },
@@ -30,162 +39,128 @@
         "localPresencial": null,
         "tipoLocal": 1,
         "id": 1
+      },
+      {
+        "$id": "7",
+        "contato": {
+          "$ref": "4"
+        },
+        "assunto": "Meet de Gest\u00E3o de app",
+        "data": "2023-06-05T11:22:44",
+        "horaInicio": "08:00:44",
+        "horaTermino": "09:00:44",
+        "localOnline": "",
+        "localPresencial": null,
+        "tipoLocal": 1,
+        "id": 2
       }
     ]
   },
   "tarefas": {
-    "$id": "6",
+    "$id": "8",
     "$values": [
       {
-        "$id": "7",
+        "$id": "9",
+        "itensConcluidos": 3,
         "prioridade": 0,
-        "titulo": "Deixar de ser imbecil",
-        "dataInicial": "2023-06-02T16:56:25.436494-03:00",
-        "dataFinal": "2023-06-02T16:56:25.4331334-03:00",
+        "titulo": "12313",
+        "dataInicial": "2023-06-03T12:27:34.7321059-03:00",
+        "dataFinal": "2023-06-03T12:27:34.7269159-03:00",
         "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "8",
+          "$id": "10",
           "$values": [
             {
-              "$id": "9",
-              "descricao": "Fazer Exerc\u00EDcio",
-              "estaConcluido": true
-            },
-            {
-              "$id": "10",
-              "descricao": "Comer comida saud\u00E1vel",
-              "estaConcluido": true
-            },
-            {
               "$id": "11",
-              "descricao": "Tomar \u00E1gua",
+              "descricao": "1",
               "estaConcluido": true
             },
             {
               "$id": "12",
-              "descricao": "Arrumar um BF",
+              "descricao": "2",
+              "estaConcluido": true
+            },
+            {
+              "$id": "13",
+              "descricao": "3",
               "estaConcluido": true
             }
           ]
         },
-        "id": 4
+        "id": 16
       },
       {
-        "$id": "13",
+        "$id": "14",
+        "itensConcluidos": 3,
         "prioridade": 1,
-        "titulo": "Fazer as provas",
-        "dataInicial": "2023-06-02T16:56:34.0976253-03:00",
-        "dataFinal": "2023-06-02T16:56:34.0945353-03:00",
+        "titulo": "aff",
+        "dataInicial": "2023-06-03T12:28:02.8679648-03:00",
+        "dataFinal": "2023-06-03T12:28:02.8607479-03:00",
         "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "14",
+          "$id": "15",
           "$values": [
             {
-              "$id": "15",
-              "descricao": "Organizar os Livros",
-              "estaConcluido": true
-            },
-            {
               "$id": "16",
-              "descricao": "Separar as atividades usadas",
+              "descricao": "1",
               "estaConcluido": true
             },
             {
               "$id": "17",
-              "descricao": "Organizar os textos",
+              "descricao": "2",
               "estaConcluido": true
             },
             {
               "$id": "18",
-              "descricao": "Separar as imagens",
+              "descricao": "3",
               "estaConcluido": true
             }
           ]
         },
-        "id": 5
+        "id": 17
       },
       {
         "$id": "19",
+        "itensConcluidos": 4,
         "prioridade": 0,
-        "titulo": "Arrumar um tempo",
-        "dataInicial": "2023-06-03T08:24:56.3341616-03:00",
-        "dataFinal": "2023-06-03T08:24:56.32735-03:00",
-        "porcentagemConcluida": 0,
+        "titulo": "ALoka",
+        "dataInicial": "2023-06-03T12:51:26.9253205-03:00",
+        "dataFinal": "2023-06-03T12:51:26.9205836-03:00",
+        "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
           "$id": "20",
           "$values": [
             {
               "$id": "21",
-              "descricao": "Ver um filme",
-              "estaConcluido": false
+              "descricao": "1",
+              "estaConcluido": true
             },
             {
               "$id": "22",
-              "descricao": "Tomar agua",
-              "estaConcluido": false
+              "descricao": "2",
+              "estaConcluido": true
             },
             {
               "$id": "23",
-              "descricao": "Sair com amigos",
-              "estaConcluido": false
-            }
-          ]
-        },
-        "id": 7
-      },
-      {
-        "$id": "24",
-        "prioridade": 1,
-        "titulo": "Limpar as paredes",
-        "dataInicial": "2023-06-03T08:25:04.8360935-03:00",
-        "dataFinal": "2023-06-03T08:25:04.8329383-03:00",
-        "porcentagemConcluida": 0,
-        "tarefaConcluida": false,
-        "itensTarefa": {
-          "$id": "25",
-          "$values": [
-            {
-              "$id": "26",
-              "descricao": "Pegar um balde",
-              "estaConcluido": false
+              "descricao": "3",
+              "estaConcluido": true
             },
             {
-              "$id": "27",
-              "descricao": "Pegar detergente",
-              "estaConcluido": false
+              "$id": "24",
+              "descricao": "4",
+              "estaConcluido": true
             }
           ]
         },
-        "id": 8
-      },
-      {
-        "$id": "28",
-        "prioridade": 2,
-        "titulo": "Mandar um parab\u00E9ns",
-        "dataInicial": "2023-06-03T08:25:11.1729784-03:00",
-        "dataFinal": "2023-06-03T08:25:11.1698249-03:00",
-        "porcentagemConcluida": 0,
-        "tarefaConcluida": false,
-        "itensTarefa": {
-          "$id": "29",
-          "$values": [
-            {
-              "$id": "30",
-              "descricao": "Mandar mensagem",
-              "estaConcluido": false
-            },
-            {
-              "$id": "31",
-              "descricao": "Mandar \u00E1udio",
-              "estaConcluido": false
-            }
-          ]
-        },
-        "id": 9
+        "id": 18
       }
     ]
+  },
+  "despesas": {
+    "$id": "25",
+    "$values": []
   }
 }

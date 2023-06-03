@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConcluirEtapasTarefasForms));
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
-            progressBar1 = new ProgressBar();
+            progressBarEtapas = new ProgressBar();
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
@@ -63,12 +63,13 @@
             pictureBox5.TabIndex = 29;
             pictureBox5.TabStop = false;
             // 
-            // progressBar1
+            // progressBarEtapas
             // 
-            progressBar1.Location = new Point(7, 78);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(303, 23);
-            progressBar1.TabIndex = 31;
+            progressBarEtapas.ForeColor = Color.Lime;
+            progressBarEtapas.Location = new Point(7, 78);
+            progressBarEtapas.Name = "progressBarEtapas";
+            progressBarEtapas.Size = new Size(303, 23);
+            progressBarEtapas.TabIndex = 31;
             // 
             // label2
             // 
@@ -152,7 +153,7 @@
             Controls.Add(txtTarefa);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(progressBar1);
+            Controls.Add(progressBarEtapas);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
@@ -171,7 +172,7 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;
-        private ProgressBar progressBar1;
+        private ProgressBar progressBarEtapas;
         private Label label2;
         private Label label1;
         private Label label3;

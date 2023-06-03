@@ -11,6 +11,7 @@ namespace E_agenda1._0.ModuloTarefa
         public DateTime dataInicial;
         public DateTime dataFinal;
         public decimal porcentagemConcluida;
+        public int itensConcluidos { get; set; }
         public bool tarefaConcluida;
         public List<ItemTarefa> itensTarefa;
 
@@ -31,6 +32,8 @@ namespace E_agenda1._0.ModuloTarefa
             this.porcentagemConcluida = porcentagemConcluida;
             this.tarefaConcluida = tarefaConcluida;
             this.itensTarefa = new List<ItemTarefa>();
+            this.itensConcluidos = 0;
+            
         }
 
         public override void AtualizarInformacoes(Tarefa registroAtualizado)
@@ -52,6 +55,12 @@ namespace E_agenda1._0.ModuloTarefa
         public override string ToString()
         {
             return "Id: " + id + " , " + titulo + "Prioridade: " + prioridade;
+        }
+
+        public void IncrementarItemConcluido()
+        {
+            itensConcluidos++;
+
         }
 
         public override string[] Validar()

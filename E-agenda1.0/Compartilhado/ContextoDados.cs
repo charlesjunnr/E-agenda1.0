@@ -3,6 +3,7 @@ using E_agenda1._0.ModuloContato;
 using E_agenda1._0.ModuloTarefa;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using E_agenda1._0.ModuloDespesa;
 
 namespace E_agenda1._0.Compartilhado
 {
@@ -11,12 +12,14 @@ namespace E_agenda1._0.Compartilhado
         public List<Contato> contatos;
         public List<Compromisso> compromissos;
         public List<Tarefa> tarefas;
+        public List<Despesa> despesas;
 
         public ContextoDados()
         {
             this.contatos =  new List<Contato>();
             this.compromissos = new List<Compromisso>();
             this.tarefas = new List<Tarefa>();
+            this.despesas = new List<Despesa>();
         }
 
         public ContextoDados(bool carregarDados) : this()

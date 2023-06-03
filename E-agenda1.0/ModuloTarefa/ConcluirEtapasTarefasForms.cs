@@ -17,6 +17,8 @@ namespace E_agenda1._0.ModuloTarefa
             InitializeComponent();
 
             CarregarItensTarefa(tarefaSelecionada);
+
+            AlimentarBarraDeProgresso(tarefaSelecionada);
         }
 
         private void ConcluirEtapasTarefasForms_Load(object sender, EventArgs e)
@@ -39,7 +41,8 @@ namespace E_agenda1._0.ModuloTarefa
 
             foreach (ItemTarefa itens in itemTarefas)
             {
-                clbEtapasTarefa.Items.Add(itens.descricao);
+                if (itens.estaConcluido != true)
+                    clbEtapasTarefa.Items.Add(itens.descricao);
             }
         }
 
@@ -49,15 +52,21 @@ namespace E_agenda1._0.ModuloTarefa
             {
                 if (clbEtapasTarefa.CheckedItems.Contains(itens.descricao))
                 {
-                      itens.ConcluirItem();
-                }  
+                    tarefaSelecionada.IncrementarItemConcluido();
+                    itens.ConcluirItem();
+                }
             }
         }
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
-            
 
+
+        }
+
+        public void AlimentarBarraDeProgresso(Tarefa tarefaSelecionada)
+        {
+            progressBarEtapas.Increment((int)tarefaSelecionada.porcentagemConcluida);
         }
     }
 }
