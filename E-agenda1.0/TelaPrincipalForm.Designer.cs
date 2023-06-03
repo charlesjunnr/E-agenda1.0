@@ -63,7 +63,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = SystemColors.GradientActiveCaption;
+            menuStrip1.BackColor = SystemColors.MenuHighlight;
             menuStrip1.Font = new Font("Reem Kufi", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosMenuItem, relatóriosMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -76,9 +76,9 @@
             // 
             // cadastrosMenuItem
             // 
-            cadastrosMenuItem.BackColor = SystemColors.GradientActiveCaption;
+            cadastrosMenuItem.BackColor = SystemColors.MenuHighlight;
             cadastrosMenuItem.DropDownItems.AddRange(new ToolStripItem[] { contatosMenuItem, compromissosMenuItem, tarefasMenuItem, despesasMenuItem });
-            cadastrosMenuItem.ForeColor = Color.Black;
+            cadastrosMenuItem.ForeColor = Color.White;
             cadastrosMenuItem.Image = Properties.Resources.folder;
             cadastrosMenuItem.Name = "cadastrosMenuItem";
             cadastrosMenuItem.Size = new Size(129, 39);
@@ -87,8 +87,8 @@
             // 
             // contatosMenuItem
             // 
-            contatosMenuItem.BackColor = SystemColors.GradientActiveCaption;
-            contatosMenuItem.ForeColor = Color.Black;
+            contatosMenuItem.BackColor = SystemColors.MenuHighlight;
+            contatosMenuItem.ForeColor = Color.White;
             contatosMenuItem.Image = Properties.Resources.boy;
             contatosMenuItem.Name = "contatosMenuItem";
             contatosMenuItem.Padding = new Padding(0);
@@ -98,8 +98,8 @@
             // 
             // compromissosMenuItem
             // 
-            compromissosMenuItem.BackColor = SystemColors.GradientActiveCaption;
-            compromissosMenuItem.ForeColor = Color.Black;
+            compromissosMenuItem.BackColor = SystemColors.MenuHighlight;
+            compromissosMenuItem.ForeColor = Color.White;
             compromissosMenuItem.Image = Properties.Resources.calendar_1_;
             compromissosMenuItem.Name = "compromissosMenuItem";
             compromissosMenuItem.Size = new Size(212, 40);
@@ -108,8 +108,8 @@
             // 
             // tarefasMenuItem
             // 
-            tarefasMenuItem.BackColor = SystemColors.GradientActiveCaption;
-            tarefasMenuItem.ForeColor = Color.Black;
+            tarefasMenuItem.BackColor = SystemColors.MenuHighlight;
+            tarefasMenuItem.ForeColor = Color.White;
             tarefasMenuItem.Image = Properties.Resources.to_do_list1;
             tarefasMenuItem.Name = "tarefasMenuItem";
             tarefasMenuItem.Size = new Size(212, 40);
@@ -118,9 +118,9 @@
             // 
             // despesasMenuItem
             // 
-            despesasMenuItem.BackColor = SystemColors.GradientActiveCaption;
+            despesasMenuItem.BackColor = SystemColors.MenuHighlight;
             despesasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { despesasMenuItem1, categoriasMenuItem });
-            despesasMenuItem.ForeColor = Color.Black;
+            despesasMenuItem.ForeColor = Color.White;
             despesasMenuItem.Image = Properties.Resources.dollars;
             despesasMenuItem.Name = "despesasMenuItem";
             despesasMenuItem.Size = new Size(212, 40);
@@ -128,7 +128,8 @@
             // 
             // despesasMenuItem1
             // 
-            despesasMenuItem1.BackColor = SystemColors.GradientActiveCaption;
+            despesasMenuItem1.BackColor = SystemColors.MenuHighlight;
+            despesasMenuItem1.ForeColor = Color.White;
             despesasMenuItem1.Image = Properties.Resources.decrease1;
             despesasMenuItem1.Name = "despesasMenuItem1";
             despesasMenuItem1.Size = new Size(183, 40);
@@ -137,15 +138,17 @@
             // 
             // categoriasMenuItem
             // 
-            categoriasMenuItem.BackColor = SystemColors.GradientActiveCaption;
+            categoriasMenuItem.BackColor = SystemColors.MenuHighlight;
+            categoriasMenuItem.ForeColor = Color.White;
             categoriasMenuItem.Image = Properties.Resources.camada;
             categoriasMenuItem.Name = "categoriasMenuItem";
             categoriasMenuItem.Size = new Size(183, 40);
             categoriasMenuItem.Text = "Categorias";
+            categoriasMenuItem.Click += categoriasMenuItem_Click;
             // 
             // relatóriosMenuItem
             // 
-            relatóriosMenuItem.ForeColor = Color.Black;
+            relatóriosMenuItem.ForeColor = Color.White;
             relatóriosMenuItem.Image = Properties.Resources.caderno;
             relatóriosMenuItem.Name = "relatóriosMenuItem";
             relatóriosMenuItem.Size = new Size(129, 39);
@@ -179,7 +182,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = SystemColors.MenuHighlight;
+            toolStrip1.BackColor = SystemColors.HotTrack;
             toolStrip1.ImageScalingSize = new Size(30, 30);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, btnFiltrar, toolStripSeparator3, btnAdicionarTarefa, toolStripSeparator2, btnFinalizarEtapas, toolStripSeparator5, toolStripOrganizarTarefas, toolStripSeparator4, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 53);

@@ -153,6 +153,8 @@ namespace E_agenda1._0.ModuloTarefa
                     tarefa.AdicionarItemNaLista(item);
                 }
 
+                tarefa.AtribuirPorcentagemTarefa();
+
                 repositorioTarefa.Editar(tarefa.id, tarefa);
 
                 var listaTarefas = repositorioTarefa.SelecionarTodos();
@@ -160,20 +162,7 @@ namespace E_agenda1._0.ModuloTarefa
                 listaTarefa.AtualizarRegistros(listaTarefas);
             }
         }
-        private static void AtribuirPorcentagemTarefa(Tarefa tarefa)
-        {
-            int percentualTotal = tarefa.itensTarefa.Count;
-
-            if (percentualTotal == 0)
-            {
-                tarefa.porcentagemConcluida = 0;
-            }
-            else
-            {
-                tarefa.porcentagemConcluida = 100 * tarefa.itensConcluidos / (percentualTotal);
-            }
-
-        }
+        
 
         public List<Tarefa> SelecionarTodosPorPrioridade()
         {
@@ -235,7 +224,7 @@ namespace E_agenda1._0.ModuloTarefa
                 {
                     concluirEtapasTarefa.ConcluirEtapasTarefasCaixa(tarefa);
 
-                    AtribuirPorcentagemTarefa(tarefa);
+                    tarefa.AtribuirPorcentagemTarefa();
 
                     concluirEtapasTarefa.AlimentarBarraDeProgresso(tarefa);
 

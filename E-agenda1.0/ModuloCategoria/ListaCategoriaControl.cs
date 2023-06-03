@@ -1,5 +1,5 @@
 ﻿using E_agenda1._0.Compartilhado;
-using E_agenda1._0.ModuloContato;
+using E_agenda1._0.ModuloDespesa;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_agenda1._0.ModuloDespesa
+namespace E_agenda1._0.ModuloCategoria
 {
-    public partial class ListaDespesaControl : UserControl
+    public partial class ListaCategoriaControl : UserControl
     {
-        public ListaDespesaControl()
+        public ListaCategoriaControl()
         {
             InitializeComponent();
 
@@ -23,6 +23,7 @@ namespace E_agenda1._0.ModuloDespesa
             grid.ConfigurarGridSomenteLeitura();
 
             grid.ConfigurarGridZebrado();
+
         }
 
         public void ConfigurarColunas()
@@ -36,36 +37,21 @@ namespace E_agenda1._0.ModuloDespesa
                 },
                 new DataGridViewTextBoxColumn()
                 {
-                    Name = "despesa",
-                    HeaderText = "Despesa"
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    Name = "valor",
-                    HeaderText = "Valor"
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    Name = "data",
-                    HeaderText = "Data"
-                },
-                new DataGridViewTextBoxColumn()
-                {
-                    Name = "categoria",
-                    HeaderText = "Categoria"
+                    Name = "descricao",
+                    HeaderText = "Descrição"
                 }
             };
 
             grid.Columns.AddRange(colunas);
         }
 
-        public void AtualizarRegistros(List<Despesa> despesas)
+        public void AtualizarRegistros(List<Categoria> categorias)
         {
             grid.Rows.Clear();
 
-            foreach (Despesa despesa in despesas)
+            foreach (Categoria categoria in categorias)
             {
-                grid.Rows.Add(despesa.id, despesa.descricao, "R$" + despesa.valor, despesa.data.ToShortDateString(), String.Join(", ", despesa.categorias));            
+                grid.Rows.Add(categoria.id, categoria.descricaoCategoria);
             }
 
         }

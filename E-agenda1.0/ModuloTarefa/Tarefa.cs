@@ -63,6 +63,21 @@ namespace E_agenda1._0.ModuloTarefa
 
         }
 
+        public void AtribuirPorcentagemTarefa()
+        {
+            int percentualTotal = this.itensTarefa.Count;
+
+            if (percentualTotal == 0)
+            {
+                this.porcentagemConcluida = 0;
+            }
+            else
+            {
+                this.porcentagemConcluida = 100 * this.itensConcluidos / (percentualTotal);
+            }
+
+        }
+
         public override string[] Validar()
         {
             List<string> erros = new List<string>();

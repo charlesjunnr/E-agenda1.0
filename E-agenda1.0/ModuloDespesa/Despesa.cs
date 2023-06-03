@@ -1,4 +1,5 @@
 ﻿using E_agenda1._0.Compartilhado;
+using E_agenda1._0.ModuloCategoria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +14,15 @@ namespace E_agenda1._0.ModuloDespesa
         public decimal valor;
         public DateTime data;
         public TipoPagamentoEnum tipoPagamento;
+        public List<Categoria> categorias;
 
-        public Despesa(string descricao, decimal valor, DateTime data, TipoPagamentoEnum tipoPagamento)
+        public Despesa(string descricao, decimal valor, DateTime data, TipoPagamentoEnum tipoPagamento, List<Categoria> categorias)
         {
             this.descricao = descricao;
             this.valor = valor;
             this.data = data;
             this.tipoPagamento = tipoPagamento;
+            this.categorias = categorias;
         }
 
         public Despesa()
@@ -31,6 +34,7 @@ namespace E_agenda1._0.ModuloDespesa
             this.valor = registroAtualizado.valor;
             this.data = registroAtualizado.data;
             this.tipoPagamento = registroAtualizado.tipoPagamento;
+            this.categorias = registroAtualizado.categorias;
         }
 
         public override string[] Validar()

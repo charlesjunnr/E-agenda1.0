@@ -1,4 +1,5 @@
 ﻿using E_agenda1._0.Compartilhado;
+using E_agenda1._0.ModuloCategoria;
 using E_agenda1._0.ModuloTarefa;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace E_agenda1._0.ModuloDespesa
         IRepositorioDespesa repositorioDespesa;
         TelaDespesaForm TelaDespesaForm;
         ListaDespesaControl listaDespesa;
+        IRepositorioCategoria repositorioCategoria;
 
-        public ControladorDespesa(IRepositorioDespesa repositorioDespesa)
+        public ControladorDespesa(IRepositorioDespesa repositorioDespesa, IRepositorioCategoria repositorioCategoria)
         {
             this.repositorioDespesa = repositorioDespesa;
+            this.repositorioCategoria = repositorioCategoria;
         }
 
         public override string ToolTipInserir => "Inserir nova Despesa";
@@ -41,9 +44,11 @@ namespace E_agenda1._0.ModuloDespesa
                 return;
             }
 
+            List<Categoria> categorias = repositorioCategoria.SelecionarTodos();
+
             List<Despesa> despesas = repositorioDespesa.SelecionarTodos();
 
-            TelaDespesaForm telaDespesa = new TelaDespesaForm(despesas);
+            TelaDespesaForm telaDespesa = new TelaDespesaForm(despesas, categorias);
 
             telaDespesa.ConfigurarTela(despesaSelecionada);
 
@@ -75,7 +80,8 @@ namespace E_agenda1._0.ModuloDespesa
                 return;
             }
 
-            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir a despesa {despesa.descricao}?", "Exclusão de Compromissos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir a despesa {despesa.descricao}?", 
+                "Exclusão de Despesas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (opcaoEscolhida == DialogResult.OK)
             {
@@ -87,9 +93,11 @@ namespace E_agenda1._0.ModuloDespesa
 
         public override void Inserir()
         {
+            List<Categoria> categorias = repositorioCategoria.SelecionarTodos();
+
             List<Despesa> despesas = repositorioDespesa.SelecionarTodos();
 
-            TelaDespesaForm telaDespesa = new TelaDespesaForm(despesas);
+            TelaDespesaForm telaDespesa = new TelaDespesaForm(despesas, categorias);
 
             DialogResult opcaoEscolhida = telaDespesa.ShowDialog();
 
@@ -120,7 +128,6 @@ namespace E_agenda1._0.ModuloDespesa
             listaDespesa.AtualizarRegistros(despesa);
         }
             
-        
 
     public override string ObterTipoCadastro()
         {

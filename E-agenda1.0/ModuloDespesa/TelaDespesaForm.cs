@@ -1,4 +1,6 @@
-﻿using System;
+﻿using E_agenda1._0.ModuloCategoria;
+using E_agenda1._0.ModuloTarefa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,12 +35,21 @@ namespace E_agenda1._0.ModuloDespesa
             }
         }
 
-        public TelaDespesaForm(List<Despesa> despesas)
+        public TelaDespesaForm(List<Despesa> despesas , List<Categoria> categorias)
         {
             InitializeComponent();
+
+            CarregarCategorias(categorias);
+
         }
 
-
+        public void CarregarCategorias(List<Categoria> categorias)
+        {
+            foreach (Categoria categoria in categorias)
+            {
+                clbCategorias.Items.Add(categoria);
+            }
+        }
 
         public Despesa ObterDespesa()
         {
@@ -50,6 +61,7 @@ namespace E_agenda1._0.ModuloDespesa
 
             DateTime data = dtpData.Value;
 
+            List<Categoria> categorias = clbCategorias.CheckedItems.Cast<Categoria>().ToList();
 
             TipoPagamentoEnum pagamento;
 
@@ -66,7 +78,7 @@ namespace E_agenda1._0.ModuloDespesa
                 pagamento = TipoPagamentoEnum.Debito;
             }
 
-            despesa = new Despesa(descricao, valor, data, pagamento);
+            despesa = new Despesa(descricao, valor, data, pagamento, categorias);
 
             despesa.id = id.ToString() == "" ? 0 : Convert.ToInt32(id);
 
@@ -78,7 +90,7 @@ namespace E_agenda1._0.ModuloDespesa
 
         }
 
-        internal void ConfigurarTela(Despesa despesaSelecionada)
+        public void ConfigurarTela(Despesa despesaSelecionada)
         {
             txtId.Text = despesaSelecionada.id.ToString();
             txtDescricao.Text = despesaSelecionada.descricao.ToString();
