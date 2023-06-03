@@ -158,5 +158,10 @@ namespace E_agenda1._0
 
             ConfigurarTelaPrincipal(controlador);
         }
+
+        private void toolStripButtonDespesasCategorias_Click(object sender, EventArgs e)
+        {
+            controlador.VisualizarDespesasCategorias();
+        }
     }
 }

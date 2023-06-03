@@ -14,7 +14,8 @@ namespace E_agenda1._0.ModuloCategoria
         TelaCategoriaForm telaCategoriaForm;
         ListaCategoriaControl listaCategoriaControl;
         IRepositorioDespesa repositorioDespesa;
-
+        TelaVisualizacaoDespesasCategoriaForm telaVisualizacaoForm;
+        
         public ControladorCategoria(IRepositorioCategoria repositorioCategoria, IRepositorioDespesa repositorioDespesa)
         {
             this.repositorioCategoria = repositorioCategoria;
@@ -120,6 +121,21 @@ namespace E_agenda1._0.ModuloCategoria
             CarregarCategorias();
 
             return listaCategoriaControl;
+        }
+
+        
+
+        public override void VisualizarDespesasCategorias()
+        {
+            int id = listaCategoriaControl.ObterIdSelecionado();
+
+            Categoria categoria = repositorioCategoria.SelecionarPorId(id);
+            
+            List<Despesa> despesas = repositorioDespesa.SepararDespesasPorCategoria(categoria);
+                                  
+            TelaVisualizacaoDespesasCategoriaForm telaVisualizacao = new TelaVisualizacaoDespesasCategoriaForm(despesas, categoria);
+
+            telaVisualizacao.ShowDialog();
         }
 
         public override string ObterTipoCadastro()

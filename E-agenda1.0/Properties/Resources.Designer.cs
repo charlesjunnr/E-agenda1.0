@@ -213,6 +213,16 @@ namespace E_agenda1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camada1 {
+            get {
+                object obj = ResourceManager.GetObject("camada1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cartao {
             get {
                 object obj = ResourceManager.GetObject("cartao", resourceCulture);
@@ -566,6 +576,16 @@ namespace E_agenda1._0.Properties {
         internal static System.Drawing.Bitmap operador {
             get {
                 object obj = ResourceManager.GetObject("operador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pesquisa_paga {
+            get {
+                object obj = ResourceManager.GetObject("pesquisa-paga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

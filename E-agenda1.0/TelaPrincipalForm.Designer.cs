@@ -54,6 +54,7 @@
             toolStripSeparator5 = new ToolStripSeparator();
             toolStripOrganizarTarefas = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
+            toolStripButtonDespesasCategorias = new ToolStripButton();
             labelTipoCadastro = new ToolStripLabel();
             painelRegistros = new Panel();
             menuStrip1.SuspendLayout();
@@ -184,7 +185,7 @@
             // 
             toolStrip1.BackColor = SystemColors.HotTrack;
             toolStrip1.ImageScalingSize = new Size(30, 30);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, btnFiltrar, toolStripSeparator3, btnAdicionarTarefa, toolStripSeparator2, btnFinalizarEtapas, toolStripSeparator5, toolStripOrganizarTarefas, toolStripSeparator4, labelTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, btnFiltrar, toolStripSeparator3, btnAdicionarTarefa, toolStripSeparator2, btnFinalizarEtapas, toolStripSeparator5, toolStripOrganizarTarefas, toolStripSeparator4, toolStripButtonDespesasCategorias, labelTipoCadastro });
             toolStrip1.Location = new Point(0, 53);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(984, 51);
@@ -296,6 +297,18 @@
             toolStripSeparator4.Name = "toolStripSeparator4";
             toolStripSeparator4.Size = new Size(6, 51);
             // 
+            // toolStripButtonDespesasCategorias
+            // 
+            toolStripButtonDespesasCategorias.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonDespesasCategorias.Image = Properties.Resources.pesquisa_paga;
+            toolStripButtonDespesasCategorias.ImageTransparentColor = Color.Magenta;
+            toolStripButtonDespesasCategorias.Name = "toolStripButtonDespesasCategorias";
+            toolStripButtonDespesasCategorias.Padding = new Padding(7);
+            toolStripButtonDespesasCategorias.Size = new Size(48, 48);
+            toolStripButtonDespesasCategorias.Text = "Visualizar Despesas da Categoria";
+            toolStripButtonDespesasCategorias.ToolTipText = "Finalizar Etapas";
+            toolStripButtonDespesasCategorias.Click += toolStripButtonDespesasCategorias_Click;
+            // 
             // labelTipoCadastro
             // 
             labelTipoCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -373,5 +386,6 @@
         internal protected ToolStrip toolStrip1;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripButton toolStripOrganizarTarefas;
+        private ToolStripButton toolStripButtonDespesasCategorias;
     }
 }

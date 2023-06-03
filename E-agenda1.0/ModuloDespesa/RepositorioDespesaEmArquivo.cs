@@ -1,4 +1,5 @@
 ﻿using E_agenda1._0.Compartilhado;
+using E_agenda1._0.ModuloCategoria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,11 @@ namespace E_agenda1._0.ModuloDespesa
         public override List<Despesa> BuscarRegistros()
         {
             return contextoBase.despesas;
+        }
+
+        public List<Despesa> SepararDespesasPorCategoria(Categoria categoria)
+        {
+            return BuscarRegistros().Where(i => i.categorias.Contains(categoria)).ToList();
         }
     }
 }

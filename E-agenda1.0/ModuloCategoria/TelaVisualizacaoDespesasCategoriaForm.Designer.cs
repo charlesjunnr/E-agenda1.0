@@ -1,6 +1,6 @@
 ﻿namespace E_agenda1._0.ModuloDespesa
 {
-    partial class VisualizacaoDespesasCategoriaForm
+    partial class TelaVisualizacaoDespesasCategoriaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaVisualizacaoDespesasCategoriaForm));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             lblCategoria = new Label();
@@ -51,7 +52,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.fluxo_de_trabalho_1_;
+            pictureBox1.Image = Properties.Resources.camada1;
             pictureBox1.Location = new Point(12, 26);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 36);
@@ -83,15 +84,16 @@
             // 
             listBoxDespesas.FormattingEnabled = true;
             listBoxDespesas.ItemHeight = 15;
-            listBoxDespesas.Location = new Point(60, 105);
+            listBoxDespesas.Location = new Point(12, 105);
             listBoxDespesas.Name = "listBoxDespesas";
             listBoxDespesas.Size = new Size(496, 244);
             listBoxDespesas.TabIndex = 46;
+            listBoxDespesas.SelectedIndexChanged += listBoxDespesas_SelectedIndexChanged;
             // 
             // button1
             // 
             button1.DialogResult = DialogResult.Cancel;
-            button1.Location = new Point(481, 355);
+            button1.Location = new Point(433, 354);
             button1.Name = "button1";
             button1.Size = new Size(75, 44);
             button1.TabIndex = 47;
@@ -108,12 +110,12 @@
             pictureBox2.TabIndex = 48;
             pictureBox2.TabStop = false;
             // 
-            // VisualizacaoDespesasCategoriaForm
+            // TelaVisualizacaoDespesasCategoriaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(569, 410);
+            ClientSize = new Size(526, 410);
             Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(listBoxDespesas);
@@ -121,7 +123,9 @@
             Controls.Add(lblCategoria);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "VisualizacaoDespesasCategoriaForm";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "TelaVisualizacaoDespesasCategoriaForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Visualização de Despesas da Categoria";
             Load += VisualizacaoDespesasCategoriaForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

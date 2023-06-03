@@ -15,6 +15,8 @@ namespace E_agenda1._0.ModuloDespesa
         TelaDespesaForm TelaDespesaForm;
         ListaDespesaControl listaDespesa;
         IRepositorioCategoria repositorioCategoria;
+        
+
 
         public ControladorDespesa(IRepositorioDespesa repositorioDespesa, IRepositorioCategoria repositorioCategoria)
         {

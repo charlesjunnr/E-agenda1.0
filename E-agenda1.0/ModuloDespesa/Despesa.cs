@@ -36,7 +36,10 @@ namespace E_agenda1._0.ModuloDespesa
             this.tipoPagamento = registroAtualizado.tipoPagamento;
             this.categorias = registroAtualizado.categorias;
         }
-
+        public override string ToString()
+        {
+            return $"{descricao} | {valor} | {data.ToShortDateString()} | {tipoPagamento} | ";
+        }
         public override string[] Validar()
         {
             throw new NotImplementedException();
