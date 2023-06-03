@@ -21,8 +21,6 @@ namespace E_agenda1._0.ModuloTarefa
         {
             InitializeComponent();
 
-            ConcluirTarefa();
-
             CarregarItensTarefa(tarefaSelecionada);
 
         }

@@ -23,7 +23,7 @@ namespace E_agenda1._0.ModuloTarefa
 
         }
 
-        public bool ObterFiltro(bool filtro)
+        public bool ObterFiltro()
         {
             if (rdbPendentes.Checked == true)
             {

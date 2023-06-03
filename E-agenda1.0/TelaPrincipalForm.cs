@@ -175,5 +175,10 @@ namespace E_agenda1._0
         {
             controlador.OrdenarTarefas();
         }
+
+        private void btnFinalizarEtapas_Click(object sender, EventArgs e)
+        {
+            controlador.FinalizarEtapasTarefa();
+        }
     }
 }

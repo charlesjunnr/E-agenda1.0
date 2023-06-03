@@ -266,8 +266,9 @@
             btnFinalizarEtapas.Name = "btnFinalizarEtapas";
             btnFinalizarEtapas.Padding = new Padding(7);
             btnFinalizarEtapas.Size = new Size(48, 48);
-            btnFinalizarEtapas.Text = "Adicionar Tarefa";
+            btnFinalizarEtapas.Text = "Finalizar Etapas";
             btnFinalizarEtapas.ToolTipText = "Finalizar Etapas";
+            btnFinalizarEtapas.Click += btnFinalizarEtapas_Click;
             // 
             // toolStripSeparator5
             // 

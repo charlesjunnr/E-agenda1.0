@@ -4,6 +4,7 @@ using E_agenda1._0.ModuloContato;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -150,6 +151,8 @@ namespace E_agenda1._0.ModuloTarefa
                 foreach(ItemTarefa item in itemTarefas)
                 {
                     tarefa.AdicionarItemNaLista(item);
+
+                    AtribuirPorcentagemTarefa(tarefa, item);
                 }
 
                 repositorioTarefa.Editar(tarefa.id, tarefa);
@@ -157,7 +160,23 @@ namespace E_agenda1._0.ModuloTarefa
                 var listaTarefas = repositorioTarefa.SelecionarTodos();
 
                 listaTarefa.AtualizarRegistros(listaTarefas);
+            }
+        }
 
+        private static void AtribuirPorcentagemTarefa(Tarefa tarefa, ItemTarefa item)
+        {
+            decimal tarefasConcluidas = 0;
+            if (item.estaConcluido == true)
+            {
+                tarefasConcluidas++;
+            }
+            if (tarefasConcluidas == 0)
+            {
+                tarefa.porcentagemConcluida = 0;
+            }
+            else
+            {
+                tarefa.porcentagemConcluida = 100 / tarefasConcluidas;
             }
         }
 
@@ -180,22 +199,49 @@ namespace E_agenda1._0.ModuloTarefa
             OrdenarTarefasForm ordenarTarefasForm = new OrdenarTarefasForm();
 
             DialogResult opcaoEscolhida = ordenarTarefasForm.ShowDialog();
-            bool ordem = false;
+            
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                ordenarTarefasForm.ObterFiltro(ordem);
-
-                if (ordem == true) 
+                if (ordenarTarefasForm.ObterFiltro() == true) 
                 {
                     List<Tarefa> tarefasPorOrdem = SelecionarPendentes();
                     CarregarTarefas(tarefasPorOrdem);
                 }
-                else if(ordem == false)
+                else if(ordenarTarefasForm.ObterFiltro() == false)
                 {
                     List<Tarefa> tarefasPorOrdem = SelecionarTodosPorPrioridade();
                     CarregarTarefas(tarefasPorOrdem);
                 }
+            }
+        }
+
+        public override void FinalizarEtapasTarefa()
+        {
+            int id = listaTarefa.ObterIdSelecionado();
+
+            Tarefa tarefa = repositorioTarefa.SelecionarPorId(id);
+
+            ConcluirEtapasTarefasForms concluirEtapasTarefa = new ConcluirEtapasTarefasForms(tarefa);
+
+            DialogResult opcaoEscolhida = concluirEtapasTarefa.ShowDialog();
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                concluirEtapasTarefa.ConcluirEtapasTarefasCaixa(tarefa);
+
+                for (int i = 0; i < tarefa.itensTarefa.Count; i++)
+                {
+                    AtribuirPorcentagemTarefa(tarefa, tarefa.itensTarefa[i]);
+                }
+
+                repositorioTarefa.Editar(tarefa.id, tarefa);
+
+                var listaTarefas = repositorioTarefa.SelecionarTodos();
+
+                listaTarefa.AtualizarRegistros(listaTarefas);
+
+
             }
         }
     }

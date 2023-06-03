@@ -37,8 +37,6 @@
             lblTarefa = new Label();
             txtTarefa = new TextBox();
             bntInserir = new Button();
-            progressBar1 = new ProgressBar();
-            label2 = new Label();
             pictureBox5 = new PictureBox();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -71,7 +69,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(60, 46);
+            label1.Location = new Point(61, 46);
             label1.Name = "label1";
             label1.Size = new Size(64, 28);
             label1.TabIndex = 2;
@@ -80,7 +78,7 @@
             // txtEtapa
             // 
             txtEtapa.BackColor = SystemColors.InactiveBorder;
-            txtEtapa.Location = new Point(126, 52);
+            txtEtapa.Location = new Point(127, 52);
             txtEtapa.Name = "txtEtapa";
             txtEtapa.Size = new Size(104, 23);
             txtEtapa.TabIndex = 3;
@@ -88,11 +86,12 @@
             // clbEtapas
             // 
             clbEtapas.BackColor = SystemColors.InactiveBorder;
+            clbEtapas.Enabled = false;
             clbEtapas.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
             clbEtapas.FormattingEnabled = true;
-            clbEtapas.Location = new Point(15, 134);
+            clbEtapas.Location = new Point(15, 105);
             clbEtapas.Name = "clbEtapas";
-            clbEtapas.Size = new Size(291, 221);
+            clbEtapas.Size = new Size(291, 252);
             clbEtapas.TabIndex = 6;
             // 
             // lblTarefa
@@ -116,31 +115,13 @@
             // bntInserir
             // 
             bntInserir.Font = new Font("Segoe Print", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            bntInserir.Location = new Point(236, 52);
+            bntInserir.Location = new Point(237, 52);
             bntInserir.Name = "bntInserir";
             bntInserir.Size = new Size(70, 47);
             bntInserir.TabIndex = 11;
             bntInserir.Text = "Inserir";
             bntInserir.UseVisualStyleBackColor = true;
             bntInserir.Click += bntInserir_Click;
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(15, 105);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(291, 23);
-            progressBar1.TabIndex = 12;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(116, 74);
-            label2.Name = "label2";
-            label2.Size = new Size(88, 28);
-            label2.TabIndex = 13;
-            label2.Text = "Progresso";
-            label2.Click += label2_Click;
             // 
             // pictureBox5
             // 
@@ -155,7 +136,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.camada;
-            pictureBox1.Location = new Point(15, 46);
+            pictureBox1.Location = new Point(16, 46);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 36);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -170,7 +151,6 @@
             ClientSize = new Size(332, 434);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
-            Controls.Add(progressBar1);
             Controls.Add(bntInserir);
             Controls.Add(txtTarefa);
             Controls.Add(clbEtapas);
@@ -179,7 +159,6 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnAdicionar);
             Controls.Add(lblTarefa);
-            Controls.Add(label2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EtapasTarefaForm";
             StartPosition = FormStartPosition.CenterParent;
@@ -201,8 +180,6 @@
         private Label lblTarefa;
         private TextBox txtTarefa;
         private Button bntInserir;
-        private ProgressBar progressBar1;
-        private Label label2;
         private PictureBox pictureBox5;
         private PictureBox pictureBox1;
     }

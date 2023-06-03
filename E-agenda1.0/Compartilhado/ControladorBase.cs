@@ -26,5 +26,9 @@ namespace E_agenda1._0.Compartilhado
         public  virtual void AdicionarEtapasTarefa()
         {
         }
+        public virtual void FinalizarEtapasTarefa()
+        {
+        }
+
     }
 }
