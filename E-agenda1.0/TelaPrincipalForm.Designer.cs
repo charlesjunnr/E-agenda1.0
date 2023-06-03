@@ -133,6 +133,7 @@
             despesasMenuItem1.Name = "despesasMenuItem1";
             despesasMenuItem1.Size = new Size(183, 40);
             despesasMenuItem1.Text = "Despesas";
+            despesasMenuItem1.Click += despesasMenuItem1_Click;
             // 
             // categoriasMenuItem
             // 

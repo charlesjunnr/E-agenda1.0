@@ -35,19 +35,19 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
+            txtId = new TextBox();
+            txtDescricao = new TextBox();
+            txtValor = new TextBox();
+            dtpData = new DateTimePicker();
+            cbxPagamento = new ComboBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             label6 = new Label();
-            checkedListBox1 = new CheckedListBox();
-            button1 = new Button();
-            button2 = new Button();
+            clbCategorias = new CheckedListBox();
+            btnGravar = new Button();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -115,43 +115,46 @@
             label5.TabIndex = 38;
             label5.Text = "Forma de Pgto:";
             // 
-            // textBox1
+            // txtId
             // 
-            textBox1.Location = new Point(162, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(40, 23);
-            textBox1.TabIndex = 39;
+            txtId.Location = new Point(162, 23);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(40, 23);
+            txtId.TabIndex = 39;
+            txtId.Text = "0";
             // 
-            // textBox2
+            // txtDescricao
             // 
-            textBox2.Location = new Point(162, 74);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 23);
-            textBox2.TabIndex = 40;
+            txtDescricao.Location = new Point(162, 74);
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(255, 23);
+            txtDescricao.TabIndex = 40;
             // 
-            // textBox3
+            // txtValor
             // 
-            textBox3.Location = new Point(162, 120);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(126, 23);
-            textBox3.TabIndex = 41;
+            txtValor.Location = new Point(162, 120);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(126, 23);
+            txtValor.TabIndex = 41;
             // 
-            // dateTimePicker1
+            // dtpData
             // 
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(162, 165);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(126, 23);
-            dateTimePicker1.TabIndex = 42;
+            dtpData.CustomFormat = "dd/MM/yyyy";
+            dtpData.Format = DateTimePickerFormat.Custom;
+            dtpData.Location = new Point(162, 165);
+            dtpData.Name = "dtpData";
+            dtpData.Size = new Size(126, 23);
+            dtpData.TabIndex = 42;
             // 
-            // comboBox1
+            // cbxPagamento
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(162, 202);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(126, 23);
-            comboBox1.TabIndex = 43;
+            cbxPagamento.FormattingEnabled = true;
+            cbxPagamento.Items.AddRange(new object[] { "Dinheiro", "Crédito", "Débito" });
+            cbxPagamento.Location = new Point(162, 202);
+            cbxPagamento.Name = "cbxPagamento";
+            cbxPagamento.Size = new Size(126, 23);
+            cbxPagamento.TabIndex = 43;
+            cbxPagamento.SelectedIndexChanged += cbxPagamento_SelectedIndexChanged;
             // 
             // pictureBox2
             // 
@@ -203,53 +206,55 @@
             label6.TabIndex = 48;
             label6.Text = "Categorias";
             // 
-            // checkedListBox1
+            // clbCategorias
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(20, 273);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(397, 220);
-            checkedListBox1.TabIndex = 49;
+            clbCategorias.FormattingEnabled = true;
+            clbCategorias.Location = new Point(20, 273);
+            clbCategorias.Name = "clbCategorias";
+            clbCategorias.Size = new Size(397, 220);
+            clbCategorias.TabIndex = 49;
             // 
-            // button1
+            // btnGravar
             // 
-            button1.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(227, 521);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 51);
-            button1.TabIndex = 50;
-            button1.Text = "Gravar";
-            button1.UseVisualStyleBackColor = true;
+            btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGravar.Location = new Point(227, 521);
+            btnGravar.Name = "btnGravar";
+            btnGravar.Size = new Size(92, 51);
+            btnGravar.TabIndex = 50;
+            btnGravar.Text = "Gravar";
+            btnGravar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancelar
             // 
-            button2.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(325, 521);
-            button2.Name = "button2";
-            button2.Size = new Size(92, 51);
-            button2.TabIndex = 51;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            btnCancelar.DialogResult = DialogResult.Cancel;
+            btnCancelar.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancelar.Location = new Point(325, 521);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(92, 51);
+            btnCancelar.TabIndex = 51;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // TelaDespesaForms
+            // TelaDespesaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(440, 589);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(checkedListBox1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGravar);
+            Controls.Add(clbCategorias);
             Controls.Add(label6);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(cbxPagamento);
+            Controls.Add(dtpData);
+            Controls.Add(txtValor);
+            Controls.Add(txtDescricao);
+            Controls.Add(txtId);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -258,7 +263,7 @@
             Controls.Add(pictureBox1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "TelaDespesaForms";
+            Name = "TelaDespesaForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Despesas";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -278,18 +283,18 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private TextBox txtId;
+        private TextBox txtDescricao;
+        private TextBox txtValor;
+        private DateTimePicker dtpData;
+        private ComboBox cbxPagamento;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Label label6;
-        private CheckedListBox checkedListBox1;
-        private Button button1;
-        private Button button2;
+        private CheckedListBox clbCategorias;
+        private Button btnGravar;
+        private Button btnCancelar;
     }
 }

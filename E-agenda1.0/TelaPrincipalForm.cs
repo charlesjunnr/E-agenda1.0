@@ -1,7 +1,9 @@
 using E_agenda1._0.Compartilhado;
 using E_agenda1._0.ModuloCompromisso;
 using E_agenda1._0.ModuloContato;
+using E_agenda1._0.ModuloDespesa;
 using E_agenda1._0.ModuloTarefa;
+using System.Runtime.CompilerServices;
 
 namespace E_agenda1._0
 
@@ -16,6 +18,7 @@ namespace E_agenda1._0
         private IRepositorioContato repositorioContato = new RepositorioContatoEmArquivo(contexto);
         private IRepositorioCompromisso repositorioCompromisso = new RepositorioCompromissoEmArquivo(contexto);
         private IRepositorioTarefa repositorioTarefa = new RepositorioTarefaArquivo(contexto);
+        private IRepositorioDespesa repositorioDespesa = new RepositorioDespesaEmMemoria(new List<Despesa>());
 
 
         public TelaPrincipalForm()
@@ -179,6 +182,13 @@ namespace E_agenda1._0
         private void btnFinalizarEtapas_Click(object sender, EventArgs e)
         {
             controlador.FinalizarEtapasTarefa();
+        }
+
+        private void despesasMenuItem1_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorDespesa(repositorioDespesa);
+
+            ConfigurarTelaPrincipal(controlador);
         }
     }
 }

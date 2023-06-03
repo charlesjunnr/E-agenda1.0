@@ -40,7 +40,7 @@ namespace E_agenda1._0.ModuloTarefa
 
         }
 
-        internal void ConfigurarTela(Tarefa tarefaSelecionada)
+        public void ConfigurarTela(Tarefa tarefaSelecionada)
         {
             txtId.Text = tarefaSelecionada.id.ToString();
             txtTitulo.Text = tarefaSelecionada.titulo;
