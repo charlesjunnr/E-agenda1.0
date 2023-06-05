@@ -1,4 +1,5 @@
-﻿using E_agenda1._0.Compartilhado;
+﻿using e_agenda.Dominio.ModuloCategoria;
+using E_agenda1._0.Compartilhado;
 using E_agenda1._0.ModuloDespesa;
 using System;
 using System.Collections.Generic;

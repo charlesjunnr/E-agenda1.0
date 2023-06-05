@@ -1,4 +1,7 @@
-﻿using E_agenda1._0.ModuloContato;
+﻿using e_agenda.Dominio.ModuloCompromisso;
+using e_agenda.Dominio.ModuloContato;
+using e_agenda.Infra.Dados.Memoria.ModuloContato;
+using E_agenda1._0.ModuloContato;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

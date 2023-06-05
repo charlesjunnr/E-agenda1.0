@@ -1,6 +1,4 @@
-﻿
-
-namespace E_agenda1._0.Compartilhado
+﻿namespace E_agenda1._0.Compartilhado
 {
     public static class GridExtension
     {

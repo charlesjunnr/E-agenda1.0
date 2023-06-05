@@ -1,0 +1,279 @@
+{
+  "$id": "1",
+  "contatos": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "nome": "Charles",
+        "empresa": "Objetivo",
+        "telefone": "49999400611",
+        "email": "charles@gmail.com",
+        "cargo": "professor",
+        "id": 1
+      },
+      {
+        "$id": "4",
+        "nome": "Gianloca",
+        "empresa": "NDD",
+        "telefone": "99999999",
+        "email": "gian@gmail.com",
+        "cargo": "Dev",
+        "id": 2
+      },
+      {
+        "$id": "5",
+        "nome": "Obelius",
+        "empresa": "NDD",
+        "telefone": "99999999",
+        "email": "obelius@gmail.com",
+        "cargo": "Fodido",
+        "id": 3
+      }
+    ]
+  },
+  "compromissos": {
+    "$id": "6",
+    "$values": [
+      {
+        "$id": "7",
+        "contato": {
+          "$ref": "3"
+        },
+        "assunto": "Reuni\u00E3o",
+        "data": "2023-06-02T16:06:21.3705128-03:00",
+        "horaInicio": "08:12:42.7359510",
+        "horaTermino": "08:12:42.7273569",
+        "localOnline": "",
+        "localPresencial": null,
+        "tipoLocal": 1,
+        "id": 1
+      },
+      {
+        "$id": "8",
+        "contato": {
+          "$ref": "4"
+        },
+        "assunto": "Meet de Gest\u00E3o de app",
+        "data": "2023-06-05T11:22:44",
+        "horaInicio": "08:00:44",
+        "horaTermino": "09:00:44",
+        "localOnline": "",
+        "localPresencial": null,
+        "tipoLocal": 1,
+        "id": 2
+      }
+    ]
+  },
+  "tarefas": {
+    "$id": "9",
+    "$values": [
+      {
+        "$id": "10",
+        "itensConcluidos": 3,
+        "prioridade": 2,
+        "titulo": "Tarefa test 2",
+        "dataInicial": "2023-06-03T12:54:33.4288125-03:00",
+        "dataFinal": "2023-06-03T12:54:33.4256765-03:00",
+        "porcentagemConcluida": 100,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "11",
+          "$values": [
+            {
+              "$id": "12",
+              "descricao": "1",
+              "estaConcluido": true
+            },
+            {
+              "$id": "13",
+              "descricao": "2",
+              "estaConcluido": true
+            },
+            {
+              "$id": "14",
+              "descricao": "3",
+              "estaConcluido": true
+            }
+          ]
+        },
+        "id": 20
+      },
+      {
+        "$id": "15",
+        "itensConcluidos": 5,
+        "prioridade": 2,
+        "titulo": "Ablubl\u00E9",
+        "dataInicial": "2023-06-03T15:53:59.3820506-03:00",
+        "dataFinal": "2023-06-03T15:53:59.3782564-03:00",
+        "porcentagemConcluida": 100,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "16",
+          "$values": [
+            {
+              "$id": "17",
+              "descricao": "1",
+              "estaConcluido": true
+            },
+            {
+              "$id": "18",
+              "descricao": "2",
+              "estaConcluido": true
+            },
+            {
+              "$id": "19",
+              "descricao": "3",
+              "estaConcluido": true
+            },
+            {
+              "$id": "20",
+              "descricao": "4",
+              "estaConcluido": true
+            },
+            {
+              "$id": "21",
+              "descricao": "5",
+              "estaConcluido": true
+            }
+          ]
+        },
+        "id": 21
+      },
+      {
+        "$id": "22",
+        "itensConcluidos": 4,
+        "prioridade": 1,
+        "titulo": "Ablublp",
+        "dataInicial": "2023-06-03T15:54:59.1244442-03:00",
+        "dataFinal": "2023-06-03T15:54:59.1213677-03:00",
+        "porcentagemConcluida": 100,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "23",
+          "$values": [
+            {
+              "$id": "24",
+              "descricao": "1",
+              "estaConcluido": true
+            },
+            {
+              "$id": "25",
+              "descricao": "2",
+              "estaConcluido": true
+            },
+            {
+              "$id": "26",
+              "descricao": "3",
+              "estaConcluido": true
+            },
+            {
+              "$id": "27",
+              "descricao": "4",
+              "estaConcluido": true
+            }
+          ]
+        },
+        "id": 22
+      },
+      {
+        "$id": "28",
+        "itensConcluidos": 3,
+        "prioridade": 0,
+        "titulo": "Arrumar a casa",
+        "dataInicial": "2023-06-04T22:24:30.8419236-03:00",
+        "dataFinal": "2023-06-04T22:24:30.8386687-03:00",
+        "porcentagemConcluida": 60,
+        "tarefaConcluida": false,
+        "itensTarefa": {
+          "$id": "29",
+          "$values": [
+            {
+              "$id": "30",
+              "descricao": "1",
+              "estaConcluido": true
+            },
+            {
+              "$id": "31",
+              "descricao": "2",
+              "estaConcluido": true
+            },
+            {
+              "$id": "32",
+              "descricao": "3",
+              "estaConcluido": true
+            },
+            {
+              "$id": "33",
+              "descricao": "4",
+              "estaConcluido": false
+            },
+            {
+              "$id": "34",
+              "descricao": "5",
+              "estaConcluido": false
+            }
+          ]
+        },
+        "id": 24
+      }
+    ]
+  },
+  "despesas": {
+    "$id": "35",
+    "$values": [
+      {
+        "$id": "36",
+        "descricao": "Rol\u00EA no Embaixada",
+        "valor": 60,
+        "data": "2023-06-04T10:07:57.6725791-03:00",
+        "tipoPagamento": 2,
+        "categorias": {
+          "$id": "37",
+          "$values": [
+            {
+              "$id": "38",
+              "descricaoCategoria": "Alimenta\u00E7\u00E3o",
+              "id": 1
+            }
+          ]
+        },
+        "id": 1
+      },
+      {
+        "$id": "39",
+        "descricao": "Trajeto at\u00E9 o trabalho",
+        "valor": 80,
+        "data": "2023-06-04T10:14:01.9393222-03:00",
+        "tipoPagamento": 2,
+        "categorias": {
+          "$id": "40",
+          "$values": [
+            {
+              "$id": "41",
+              "descricaoCategoria": "Transporte",
+              "id": 2
+            }
+          ]
+        },
+        "id": 2
+      }
+    ]
+  },
+  "categorias": {
+    "$id": "42",
+    "$values": [
+      {
+        "$ref": "38"
+      },
+      {
+        "$ref": "41"
+      },
+      {
+        "$id": "43",
+        "descricaoCategoria": "Lazer",
+        "id": 3
+      }
+    ]
+  }
+}

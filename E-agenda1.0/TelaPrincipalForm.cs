@@ -1,3 +1,14 @@
+using e_agenda.Dominio.ModuloCategoria;
+using e_agenda.Dominio.ModuloCompromisso;
+using e_agenda.Dominio.ModuloContato;
+using e_agenda.Dominio.ModuloDespesa;
+using e_agenda.Dominio.ModuloTarefa;
+using e_agenda.Infra.Dados.Arquivo.Compartilhado;
+using e_agenda.Infra.Dados.Arquivo.ModuloCategoria;
+using e_agenda.Infra.Dados.Arquivo.ModuloCompromisso;
+using e_agenda.Infra.Dados.Arquivo.ModuloContato;
+using e_agenda.Infra.Dados.Arquivo.ModuloDespesa;
+using e_agenda.Infra.Dados.Arquivo.ModuloTarefa;
 using E_agenda1._0.Compartilhado;
 using E_agenda1._0.ModuloCategoria;
 using E_agenda1._0.ModuloCompromisso;
@@ -19,8 +30,8 @@ namespace E_agenda1._0
         private IRepositorioContato repositorioContato = new RepositorioContatoEmArquivo(contexto);
         private IRepositorioCompromisso repositorioCompromisso = new RepositorioCompromissoEmArquivo(contexto);
         private IRepositorioTarefa repositorioTarefa = new RepositorioTarefaArquivo(contexto);
-        private IRepositorioDespesa repositorioDespesa = new RepositorioDespesaEmMemoria(new List<Despesa>());
-        private IRepositorioCategoria repositorioCategoria = new RepositorioCategoriaEmMemoria(new List<Categoria>());
+        private IRepositorioDespesa repositorioDespesa = new RepositorioDespesaEmArquivo(contexto);
+        private IRepositorioCategoria repositorioCategoria = new RepositorioCategoriaEmArquivo(contexto);
 
         public TelaPrincipalForm()
         {

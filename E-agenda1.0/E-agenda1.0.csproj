@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\e-agenda.Dominio\e-agenda.Dominio.csproj" />
+    <ProjectReference Include="..\e-agenda.Infra.Dados.Arquivo\e-agenda.Infra.Dados.Arquivo.csproj" />
+    <ProjectReference Include="..\e-agenda.Infra.Dados.Memoria\e-agenda.Infra.Dados.Memoria.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="ModuloCategoria\TelaVisualizacaoDespesasCategoriaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -25,12 +31,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Compartilhado\dados.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

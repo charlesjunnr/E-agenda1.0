@@ -1,10 +1,9 @@
-﻿using E_agenda1._0.Compartilhado;
+﻿using e_agenda.Dominio.ModuloCategoria;
+using e_agenda.Dominio.ModuloDespesa;
+using E_agenda1._0.Compartilhado;
 using E_agenda1._0.ModuloDespesa;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
 
 namespace E_agenda1._0.ModuloCategoria
 {

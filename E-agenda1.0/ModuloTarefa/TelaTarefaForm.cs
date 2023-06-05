@@ -1,4 +1,6 @@
-﻿using E_agenda1._0.ModuloCompromisso;
+﻿using e_agenda.Dominio.ModuloTarefa;
+using e_agenda.Infra.Dados.Memoria.ModuloTarefa;
+using E_agenda1._0.ModuloCompromisso;
 using E_agenda1._0.ModuloContato;
 using System;
 using System.Collections.Generic;

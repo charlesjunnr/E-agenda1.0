@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using e_agenda.Dominio.ModuloCompromisso;
+using e_agenda.Dominio.ModuloContato;
 
 namespace E_agenda1._0.ModuloCompromisso
 {

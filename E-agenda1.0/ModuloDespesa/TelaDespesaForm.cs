@@ -1,4 +1,7 @@
-﻿using E_agenda1._0.ModuloCategoria;
+﻿using e_agenda.Dominio.ModuloCategoria;
+using e_agenda.Dominio.ModuloDespesa;
+using e_agenda.Infra.Dados.Memoria.ModuloDespesa;
+using E_agenda1._0.ModuloCategoria;
 using E_agenda1._0.ModuloTarefa;
 using System;
 using System.Collections.Generic;

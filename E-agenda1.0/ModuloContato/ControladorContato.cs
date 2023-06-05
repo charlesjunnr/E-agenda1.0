@@ -1,4 +1,5 @@
-﻿using E_agenda1._0.Compartilhado;
+﻿using e_agenda.Dominio.ModuloContato;
+using E_agenda1._0.Compartilhado;
 using System;
 using System.Collections.Generic;
 using System.Linq;

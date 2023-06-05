@@ -1,13 +1,5 @@
-﻿using E_agenda1._0.ModuloCategoria;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using e_agenda.Dominio.ModuloCategoria;
+using e_agenda.Dominio.ModuloDespesa;
 
 namespace E_agenda1._0.ModuloDespesa
 {
