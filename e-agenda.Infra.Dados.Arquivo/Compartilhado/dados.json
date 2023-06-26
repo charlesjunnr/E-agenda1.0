@@ -38,20 +38,6 @@
       {
         "$id": "7",
         "contato": {
-          "$ref": "3"
-        },
-        "assunto": "Reuni\u00E3o",
-        "data": "2023-06-02T16:06:21.3705128-03:00",
-        "horaInicio": "08:12:42.7359510",
-        "horaTermino": "08:12:42.7273569",
-        "localOnline": "",
-        "localPresencial": null,
-        "tipoLocal": 1,
-        "id": 1
-      },
-      {
-        "$id": "8",
-        "contato": {
           "$ref": "4"
         },
         "assunto": "Meet de Gest\u00E3o de app",
@@ -66,10 +52,10 @@
     ]
   },
   "tarefas": {
-    "$id": "9",
+    "$id": "8",
     "$values": [
       {
-        "$id": "10",
+        "$id": "9",
         "itensConcluidos": 3,
         "prioridade": 2,
         "titulo": "Tarefa test 2",
@@ -78,20 +64,20 @@
         "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "11",
+          "$id": "10",
           "$values": [
             {
-              "$id": "12",
+              "$id": "11",
               "descricao": "1",
               "estaConcluido": true
             },
             {
-              "$id": "13",
+              "$id": "12",
               "descricao": "2",
               "estaConcluido": true
             },
             {
-              "$id": "14",
+              "$id": "13",
               "descricao": "3",
               "estaConcluido": true
             }
@@ -100,7 +86,7 @@
         "id": 20
       },
       {
-        "$id": "15",
+        "$id": "14",
         "itensConcluidos": 5,
         "prioridade": 2,
         "titulo": "Ablubl\u00E9",
@@ -109,30 +95,30 @@
         "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "16",
+          "$id": "15",
           "$values": [
             {
-              "$id": "17",
+              "$id": "16",
               "descricao": "1",
               "estaConcluido": true
             },
             {
-              "$id": "18",
+              "$id": "17",
               "descricao": "2",
               "estaConcluido": true
             },
             {
-              "$id": "19",
+              "$id": "18",
               "descricao": "3",
               "estaConcluido": true
             },
             {
-              "$id": "20",
+              "$id": "19",
               "descricao": "4",
               "estaConcluido": true
             },
             {
-              "$id": "21",
+              "$id": "20",
               "descricao": "5",
               "estaConcluido": true
             }
@@ -141,7 +127,7 @@
         "id": 21
       },
       {
-        "$id": "22",
+        "$id": "21",
         "itensConcluidos": 4,
         "prioridade": 1,
         "titulo": "Ablublp",
@@ -150,25 +136,25 @@
         "porcentagemConcluida": 100,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "23",
+          "$id": "22",
           "$values": [
             {
-              "$id": "24",
+              "$id": "23",
               "descricao": "1",
               "estaConcluido": true
             },
             {
-              "$id": "25",
+              "$id": "24",
               "descricao": "2",
               "estaConcluido": true
             },
             {
-              "$id": "26",
+              "$id": "25",
               "descricao": "3",
               "estaConcluido": true
             },
             {
-              "$id": "27",
+              "$id": "26",
               "descricao": "4",
               "estaConcluido": true
             }
@@ -177,7 +163,7 @@
         "id": 22
       },
       {
-        "$id": "28",
+        "$id": "27",
         "itensConcluidos": 3,
         "prioridade": 0,
         "titulo": "Arrumar a casa",
@@ -186,30 +172,30 @@
         "porcentagemConcluida": 60,
         "tarefaConcluida": false,
         "itensTarefa": {
-          "$id": "29",
+          "$id": "28",
           "$values": [
             {
-              "$id": "30",
+              "$id": "29",
               "descricao": "1",
               "estaConcluido": true
             },
             {
-              "$id": "31",
+              "$id": "30",
               "descricao": "2",
               "estaConcluido": true
             },
             {
-              "$id": "32",
+              "$id": "31",
               "descricao": "3",
               "estaConcluido": true
             },
             {
-              "$id": "33",
+              "$id": "32",
               "descricao": "4",
               "estaConcluido": false
             },
             {
-              "$id": "34",
+              "$id": "33",
               "descricao": "5",
               "estaConcluido": false
             }
@@ -220,19 +206,19 @@
     ]
   },
   "despesas": {
-    "$id": "35",
+    "$id": "34",
     "$values": [
       {
-        "$id": "36",
+        "$id": "35",
         "descricao": "Rol\u00EA no Embaixada",
         "valor": 60,
         "data": "2023-06-04T10:07:57.6725791-03:00",
         "tipoPagamento": 2,
         "categorias": {
-          "$id": "37",
+          "$id": "36",
           "$values": [
             {
-              "$id": "38",
+              "$id": "37",
               "descricaoCategoria": "Alimenta\u00E7\u00E3o",
               "id": 1
             }
@@ -241,16 +227,16 @@
         "id": 1
       },
       {
-        "$id": "39",
+        "$id": "38",
         "descricao": "Trajeto at\u00E9 o trabalho",
         "valor": 80,
         "data": "2023-06-04T10:14:01.9393222-03:00",
         "tipoPagamento": 2,
         "categorias": {
-          "$id": "40",
+          "$id": "39",
           "$values": [
             {
-              "$id": "41",
+              "$id": "40",
               "descricaoCategoria": "Transporte",
               "id": 2
             }
@@ -261,16 +247,16 @@
     ]
   },
   "categorias": {
-    "$id": "42",
+    "$id": "41",
     "$values": [
       {
-        "$ref": "38"
+        "$ref": "37"
       },
       {
-        "$ref": "41"
+        "$ref": "40"
       },
       {
-        "$id": "43",
+        "$id": "42",
         "descricaoCategoria": "Lazer",
         "id": 3
       }
